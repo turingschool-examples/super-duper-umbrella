@@ -7,6 +7,7 @@ class Player
     name = @full_name.split(' ')
     @first_name = name[0]
     @last_name = name[1]
+    @nickname = nil
     
     @monthly_cost = monthly_cost
     @contract_length = contract_length
@@ -18,5 +19,12 @@ class Player
   def total_cost
     @contract_length * @monthly_cost
   end
-  
+
+  def nickname
+    @nickname
+  end
+
+  def set_nickname!(nickname)
+    @nickname = nickname
+  end
 end
