@@ -14,4 +14,12 @@ class Team
   def player_count
     @roster.count
   end
+
+  def long_term_players
+    @roster.select do |player|
+      player.contract_length > 24
+    end
+  end
+
+  
 end
