@@ -1,40 +1,48 @@
 require 'rspec'
 require './lib/player'
+require 'pry'
 
 RSpec.describe Player do
-  xit 'exists' do
-    player = Player.new("Michael Palledorous" , 1000000, 36)
-
-    expect(player).to be_a Player
+  #binding.pry
+  before(:each) do
+  @player = Player.new("Michael Palledorous" , 1000000, 36)
   end
 
-  xit 'has a first name' do
-    player = Player.new("Michael Palledorous" , 1000000, 36)
-
-    expect(player.first_name).to eq("Michael")
+  it 'exists' do
+    expect(@player).to be_a Player
   end
 
-  xit 'has a last name' do
-    player = Player.new("Michael Palledorous" , 1000000, 36)
-
-    expect(player.last_name).to eq("Palledorous")
+  it 'has a first name' do
+    expect(@player.first_name).to eq("Michael")
   end
 
-  xit 'has a monthly cost' do
-    player = Player.new("Michael Palledorous" , 1000000, 36)
-
-    expect(player.monthly_cost).to eq(1000000)
+  it 'has a last name' do
+   expect(@player.last_name).to eq("Palledorous")
   end
 
-  xit 'has a contract length' do
-    player = Player.new("Michael Palledorous" , 1000000, 36)
-
-    expect(player.contract_length).to eq(36)
+  it 'has a monthly cost' do
+   expect(@player.monthly_cost).to eq(1000000)
   end
 
-  xit 'has a total cost' do
-    player = Player.new("Michael Palledorous" , 1000000, 36)
-
-    expect(player.total_cost).to eq(36000000)
+  it 'has a contract length' do
+    expect(@player.contract_length).to eq(36)
   end
+
+  it 'has a total cost' do
+    expect(@player.total_cost).to eq(36000000)
+  end
+
+  it 'starts with no nickname' do
+    expect(@player.nickname).to eq(nil)
+  end
+  
+  it 'sets nickname' do
+    @player.set_nickname!("Squints")
+  
+    expect(@player.nickname).to eq("Squints")
+  end
+
+
+
+
 end
