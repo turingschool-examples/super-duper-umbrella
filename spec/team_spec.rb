@@ -23,9 +23,6 @@ RSpec.describe Team do
 
   it 'starts with an empty roster' do
     expect(@team.roster).to eq([])
-  end
-
-  it 'starts with 0 players' do
     expect(@team.player_count).to eq(0)
   end
 
@@ -35,13 +32,15 @@ RSpec.describe Team do
 
     @team.add_player(@player_1)
     @team.add_player(@player_2)
+
+    @team.roster
+    expect(@team.roster).to eq([@player_1, @player_2])
+    
+    @team.player_count
+    expect(@team.player_count).to eq(2)
+
   end
  
-  it 'updates roster and player count' do
-    @team.roster
-    @team.player_count
-  end
-  
  
 
 
