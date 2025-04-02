@@ -1,5 +1,6 @@
 require 'rspec'
 require './lib/player'
+require 'pry'
 
 RSpec.describe Player do
   it 'exists' do
