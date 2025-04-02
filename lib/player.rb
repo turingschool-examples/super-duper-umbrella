@@ -3,12 +3,15 @@ class Player
 
     def initialize(name, cost, contract_length)
         @name = name
-        #@first_name = name.split.shift
-        #@last_name = name.split.pop
         @cost = cost
         @contract_length = contract_length
 
     end
+    # def initialize{
+    #     name: name
+    #     cost: cost
+    #     contract_length: contract_length
+    # }
 
     def monthly_cost
         return @cost
