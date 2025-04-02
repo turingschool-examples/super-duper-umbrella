@@ -1,7 +1,9 @@
 class Team 
-  attr_reader :team_name, :city
-  def initialize(team_name, city)
-    @team_name = team_name
+  attr_reader :name, :city
+  def initialize(name, city)
+    @name = name
     @city = city
   end
+
+
 end

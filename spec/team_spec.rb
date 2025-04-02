@@ -11,6 +11,11 @@ RSpec.describe Team do
   end
 
   it 'has attributes' do
+    team = Team.new("Dodgers", "Los Angeles")
     
+    expect(team.name).to eq("Dodgers")
+    expect(team.city).to eq("Los Angeles")
   end
+
+  
 end 
