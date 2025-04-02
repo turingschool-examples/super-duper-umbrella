@@ -16,6 +16,7 @@ RSpec.describe Team do
     expect(team.name).to eq("Dodgers")
     expect(team.city).to eq("Los Angeles")
     expect(team.roster).to eq([])
+    expect(team.player_count).to eq(0)
   end
 
 
