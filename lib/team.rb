@@ -11,5 +11,7 @@ class Team
     @roster << player
   end
 
-
+  def player_count
+    @roster.count
+  end
 end
