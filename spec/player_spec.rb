@@ -1,6 +1,7 @@
 require 'pry'
 require 'rspec'
 require './lib/player'
+require './lib/team'
 
 RSpec.describe Player do
   it 'exists' do
