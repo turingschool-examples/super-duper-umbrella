@@ -7,6 +7,12 @@ class Player
   end
 
   def first_name
-    @name.split[0]
+    @name.split[0] #1st way to do this
   end
+
+  def last_name
+    @name.split.last #2nd way
+  end
+
+  
 end
