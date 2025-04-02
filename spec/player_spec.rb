@@ -2,7 +2,7 @@ require 'rspec'
 require './lib/player'
 
 RSpec.describe Player do
-  xit 'exists' do
+  it 'exists' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
 
     expect(player).to be_a Player
