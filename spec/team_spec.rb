@@ -75,4 +75,22 @@ RSpec.describe Team do
     expect(@team.total_value).to eq(85200000)
   end
 
+  it 'stores a hash with value/key pairs for total value and player count' do
+    @team.add_player(@player_1)
+    @team.add_player(@player_2)
+    @team.add_player(@player_3)
+    @team.add_player(@player_4)
+
+    expect(@team.details).to eq({"total value" => 85200000, "player count" => 4})
+  end
+
+  it 'returns the average cost per player' do
+    #=> "$21,300,000"
+  end
+
+  it 'sorts the roster by last name in ascending alphabetical order' do
+    expect(@team.players_by_last_name).to eq("DeNunez, McClennan, Palledorous, Porter")
+    #=> "DeNunez, McClennan, Palledorous, Porter"
+  end 
+
 end
